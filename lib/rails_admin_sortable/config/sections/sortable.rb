@@ -4,6 +4,10 @@ module RailsAdmin
   module Config
     module Sections
       class Sortable < RailsAdmin::Config::Sections::Base
+        
+        register_instance_option :items_per_page do
+          nil
+        end
 
         register_instance_option :label_method do
           nil
