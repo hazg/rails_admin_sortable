@@ -16,7 +16,7 @@ module RailsAdmin
         register_instance_option :controller do
           Proc.new do
             @sortable_section = model_config.sortable
-            @objects = list_entries.sort { |a,b| a.send(@sortable_section.position_method) <=> b.send(@sortable_section.position_method) }
+            @objects = list_entries.limit(@sortable_section.items_per_page).sort { |a,b| a.send(@sortable_section.position_method) <=> b.send(@sortable_section.position_method) }
 
             if request.post?
               original_model =  @abstract_model.model
