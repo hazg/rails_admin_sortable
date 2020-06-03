@@ -17,6 +17,7 @@
         <% end %>
       </span>
       <span class="li_sortable_label">
+        <i class="fa fa-bars"></i>
         <% if @sortable_section.label_method.nil? %>
           <%= o.to_s %>
         <% else %>
@@ -49,10 +50,10 @@
             data: { 'data': ordered },
             success: function (data) {
               $('.btn-validate').removeAttr("disabled");
-              $('.alert-status').html('<div class="alert alert-dismissible alert-success"> <button class="close" data-dismiss="alert" type="button">×</button>Modification éffectuée avec succès</div>').fadeIn().delay(3000).fadeOut();
+              $('.alert-status').html('<div class="alert alert-dismissible alert-success"> <button class="close" data-dismiss="alert" type="button">×</button>Salvo com sucesso</div>').fadeIn().delay(3000).fadeOut();
             },
             error: function (data) {
-              $('.alert-status').html('<div class="alert alert-dismissible alert-danger"> <button class="close" data-dismiss="alert" type="button">×</button>Erreur lors de la modification</div>').fadeIn().delay(3000).fadeOut();
+              $('.alert-status').html('<div class="alert alert-dismissible alert-danger"> <button class="close" data-dismiss="alert" type="button">×</button>Ocorreu ao salvar</div>').fadeIn().delay(3000).fadeOut();
             }
           });
         });
