@@ -7,4 +7,4 @@ en:
         breadcrumb: "Sortable"
         link: "Sortable"
         done: "Sorted"
-        title_section: Make a sort
+        error: "Sorting error"
