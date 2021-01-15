@@ -1,0 +1,10 @@
+ru:
+  admin:
+    actions:
+      sortable:
+        title: "Сортировка"
+        menu: "Сортировать"
+        breadcrumb: "Сортировка"
+        link: "Сортировка"
+        done: "Отсортированно"
+        title_section: Отсортировать
