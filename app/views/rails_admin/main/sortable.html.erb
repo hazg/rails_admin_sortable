@@ -1,23 +1,15 @@
 <div class="alert-status"></div>
 
-<em>
-  <%= t 'helper_sortable' %>
-</em>
-
-<br />
-<br />
-
-<legend><%= t 'title_section' %></legend>
 <ul id="sortable">
   <% @objects.each do |o| %>
-    <li data-id="<%= o.id %>" data-position="" class="sortable-container">
+    <li data-id="<%= o.id %>" data-position="" class="sortable-container" style="list-style: none;">
       <span class="ref_number">
         <% unless @sortable_section.position_method.nil? %>
           <%= o.send(@sortable_section.position_method) %>
         <% end %>
       </span>
       <span class="li_sortable_label">
-        <i class="fa fa-bars"></i>
+        <i class="fa fa-2 fa-bars"></i>
         <% if @sortable_section.label_method.nil? %>
           <%= o.to_s %>
         <% else %>
